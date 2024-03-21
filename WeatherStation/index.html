@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Station</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.1/chart.min.js"
+      integrity="sha512-2uu1jrAmW1A+SMwih5DAPqzFS2PI+OPw79OVLS4NJ6jGHQ/GmIVDDlWwz4KLO8DnoUmYdU8hTtFcp8je6zxbCg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <h1>Weather Station</h1>
+      <input type="text" id="cityInput" placeholder="Enter city:" />
+      <button id="submitButton">Submit</button>
+      <div id="weatherInfo" class="weatherContainer">
+        <div class="todaysWeather"></div>
+        <div class="fourDays"></div>
+      </div>
+    </div>
+  </body>
+</html>

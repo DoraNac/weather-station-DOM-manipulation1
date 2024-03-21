@@ -1,0 +1,97 @@
+
+  
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: 
+      url("https://c0.wallpaperflare.com/preview/572/961/266/sky-dark-light-clouds.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.mainContainer {
+  padding-top: 10px;
+  max-width: 1500px;
+  margin: 50px auto;
+  text-align: center;
+  background-color: #e0e0e062;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #ffffff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #002cb2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.weatherContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.weatherCard {
+  flex: 70%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #cccccc;
+  transition: all 0.3s ease;
+}
+
+.todaysWeather {
+  display: flex;
+  flex-direction: row;
+  margin: 50px 50px;
+  text-align: center;
+  border: 2px;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  background-color: #dddddd;
+}
+.todaysWeather:hover {
+  transform: scale(1.05);
+  background-color: #c5c5c57e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.fourDays {
+  padding: 15px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+.weatherCard:hover {
+  background-color: #c5c5c57e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
