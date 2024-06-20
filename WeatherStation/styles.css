@@ -1,14 +1,9 @@
-
-  
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-image: 
-      url("https://c0.wallpaperflare.com/preview/572/961/266/sky-dark-light-clouds.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("https://c0.wallpaperflare.com/preview/572/961/266/sky-dark-light-clouds.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .mainContainer {
   padding-top: 10px;
@@ -18,13 +13,15 @@
   background-color: #e0e0e062;
   border-radius: 10px;
 }
+h2{
+  color: #51749b;
+}
 
 h1 {
   margin-bottom: 20px;
-  font-size: 36px;
-  color: #ffffff; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
-
+  font-size: 120px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 input[type="text"] {
@@ -49,8 +46,9 @@ button:hover {
 
 .weatherContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
+  align-items: baseline;
 }
 
 .weatherCard {
@@ -66,32 +64,72 @@ button:hover {
 }
 
 .todaysWeather {
+  padding: 15px;
+  margin-top: 50px;
+  margin-right: -18px;
   display: flex;
   flex-direction: row;
-  margin: 50px 50px;
-  text-align: center;
-  border: 2px;
-  border-radius: 10px;
-  justify-content: space-evenly;
-  background-color: #dddddd;
 }
 .todaysWeather:hover {
   transform: scale(1.05);
-  background-color: #c5c5c57e;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
   transition: all 0.3s ease;
 }
 .fourDays {
   padding: 15px;
   margin-top: 50px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-around;
-  gap: 5px;
+  gap: 10px;
 }
 
 .weatherCard:hover {
-  background-color: #c5c5c57e;
+  background-color: #e6e6e6d2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transform: scale(1.05);
+}
+
+.mainContainer {
+  max-width: 1000px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.weatherCard {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  max-width: 300px;
+  width: 100%;
+  color: #000;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+*/ .weatherCard:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 600px) {
+  .weatherCard {
+    max-width: 100%;
+  }
+
+  input[type="text"] {
+    width: 80%;
+  }
+}
+
+.text {
+  color: #e7e7e7a9;
+  font-size: 30px;
 }

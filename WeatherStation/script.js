@@ -1,3 +1,5 @@
+//FETCHING WEATHER API DATA 
+
 async function fetchWeather(city) {
   try {
     const geoUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
@@ -29,13 +31,15 @@ async function fetchWeather(city) {
   }
 }
 
+
+// DISPLAY TODAY AND FOUR DAYS WEATHER
+
 function displayWeather(weatherData) {
   const todaysWeatherDiv = document.querySelector(".todaysWeather");
   const fourDaysDiv = document.querySelector(".fourDays");
 
-  let html = "<div class='weather-card'>";
-  html += "<h2>Today's Weather:</h2>";
-  html += `<p>Date: ${new Date().toISOString().split("T")[0]}</p>`;
+    let html = `<div class='weatherCard'>`;
+  html += "<h2>Today:</h2>";
   html += `<p>Temperature: ${weatherData.daily.temperature_2m_max[0]}°C / ${weatherData.daily.temperature_2m_min[0]}°C</p>`;
   html += `<p>Precipitation: ${weatherData.daily.precipitation_sum[0]} mm</p>`;
   html += "</div>";
@@ -48,8 +52,7 @@ function displayWeather(weatherData) {
     const dateString = timeArray[i];
     const date = new Date(dateString);
     html += `<div class='weatherCard'>`;
-    html += `<h2>Weather for ${date.toISOString().split("T")[0]}:</h2>`;
-    html += `<p>Date: ${date.toISOString().split("T")[0]}</p>`;
+    html += `<h2> ${date.toISOString().split("T")[0]}:</h2>`;
     html += `<p>Temperature: ${weatherData.daily.temperature_2m_max[i]}°C / ${weatherData.daily.temperature_2m_min[i]}°C</p>`;
     html += `<p>Precipitation: ${weatherData.daily.precipitation_sum[i]} mm</p>`;
     html += "</div>";
@@ -57,6 +60,8 @@ function displayWeather(weatherData) {
 
   fourDaysDiv.innerHTML = html;
 }
+
+// TRIGGER WEATHER DATA AND DISPLAY
 
 document.getElementById("submitButton").addEventListener("click", async () => {
   const cityInput = document.getElementById("cityInput").value;
